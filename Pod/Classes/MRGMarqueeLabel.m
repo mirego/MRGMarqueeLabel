@@ -1,0 +1,285 @@
+//
+// Copyright (c) 2014, Mirego
+// All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are met:
+//
+// - Redistributions of source code must retain the above copyright notice,
+//   this list of conditions and the following disclaimer.
+// - Redistributions in binary form must reproduce the above copyright notice,
+//   this list of conditions and the following disclaimer in the documentation
+//   and/or other materials provided with the distribution.
+// - Neither the name of the Mirego nor the names of its contributors may
+//   be used to endorse or promote products derived from this software without
+//   specific prior written permission.
+//
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+// IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+// ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+// LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+// CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+// SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+// INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+// CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+// ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+// POSSIBILITY OF SUCH DAMAGE.
+
+#import "MRGMarqueeLabel.h"
+
+@interface MRGMarqueeLabel ()
+@property (nonatomic) UIView *contentView;
+@property (nonatomic) UIView *labelsContainerView;
+@property (nonatomic) UILabel *firstLabel;
+@property (nonatomic) UILabel *secondLabel;
+@property (nonatomic) CAGradientLayer *maskLayer;
+@property (nonatomic) BOOL textFitsWidth;
+@end
+
+@implementation MRGMarqueeLabel
+
+@dynamic text, font, textColor;
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    return [self initWithFrame:frame text:nil];
+}
+
+- (instancetype)initWithFrame:(CGRect)frame text:(NSString *)text {
+    if (self = [super initWithFrame:frame]) {
+
+        self.contentView = [[UIView alloc] init];
+        [self addSubview:self.contentView];
+
+        self.labelsContainerView = [[UIView alloc] init];
+        [self.contentView addSubview:self.labelsContainerView];
+
+        self.firstLabel = [[UILabel alloc] init];
+        self.firstLabel.backgroundColor = [UIColor clearColor];
+        [self.labelsContainerView addSubview:self.firstLabel];
+
+        self.secondLabel = [[UILabel alloc] init];
+        self.secondLabel.backgroundColor = [UIColor clearColor];
+        [self.labelsContainerView addSubview:self.secondLabel];
+
+        self.maskLayer = [CAGradientLayer layer];
+        self.maskLayer.startPoint = CGPointMake(0, 0.5f);
+        self.maskLayer.endPoint = CGPointMake(1, 0.5f);
+        self.maskLayer.colors = [self leftSideVisibleColors];
+        self.maskInset = 20.0f;
+
+        self.text = text;
+        self.animationSpeed = 100;
+        self.animationTimingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+        self.pause = 1;
+        self.gapWidth = 100.0f;
+    }
+    return self;
+}
+
+- (void)setFrame:(CGRect)frame {
+    if (!CGRectEqualToRect(self.frame, frame)) {
+        [super setFrame:frame];
+        
+        self.contentView.frame = self.bounds;
+        self.maskLayer.bounds = self.bounds;
+        self.maskLayer.position = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
+        [self updateMaskGradientLocations];
+        [self setNeedsLayout];
+    }
+}
+
+- (CGSize)sizeThatFits:(CGSize)size {
+    return [self.firstLabel sizeThatFits:size];
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    [self layoutLabels];
+}
+
+#pragma mark - Getters and Setters
+
+- (void)setMaskInset:(CGFloat)maskInset {
+    _maskInset = maskInset;
+    [self updateMaskGradientLocations];
+    [self setNeedsLayout];
+}
+
+- (void)setText:(NSString *)text {
+    if (![self.firstLabel.text isEqualToString:text]) {
+        self.firstLabel.text = text;
+        self.secondLabel.text = text;
+        [self setNeedsLayout];
+    }
+}
+
+- (NSString *)text {
+    return self.firstLabel.text;
+}
+
+- (void)setTextColor:(UIColor *)textColor {
+    if (![self.firstLabel.textColor isEqual:textColor]) {
+        self.firstLabel.textColor = textColor;
+        self.secondLabel.textColor = textColor;
+    }
+}
+
+- (UIColor *)textColor {
+    return self.firstLabel.textColor;
+}
+
+- (void)setFont:(UIFont *)font {
+    if (![self.firstLabel.font isEqual:font]) {
+        self.firstLabel.font = font;
+        self.secondLabel.font = font;
+        [self setNeedsLayout];
+    }
+}
+
+- (UIFont *)font {
+    return self.firstLabel.font;
+}
+
+- (void)setTextAlignment:(MRGMarqueeLabelTextAlignment)textAlignment {
+    if (_textAlignment != textAlignment) {
+        _textAlignment = textAlignment;
+        [self updateMaskColors];
+        [self setNeedsLayout];
+    }
+}
+
+- (void)setPause:(CGFloat)pause {
+    if (_pause != pause) {
+        _pause = pause;
+        [self updateMaskColors];
+    }
+}
+
+- (void)setGapWidth:(CGFloat)gapWidth {
+    if (_gapWidth != gapWidth) {
+        _gapWidth = gapWidth;
+        [self setNeedsLayout];
+    }
+}
+
+#pragma mark - Private Methods
+
+- (void)layoutLabels {
+    [self.labelsContainerView.layer removeAllAnimations];
+    [self.contentView.layer removeAllAnimations];
+
+    CGSize labelSize = [self.firstLabel sizeThatFits:CGSizeZero];
+
+    self.textFitsWidth = labelSize.width <= CGRectGetWidth(self.bounds);
+    CGRect containerRect = CGRectZero;
+
+    if (self.textFitsWidth) {
+        containerRect.size = CGSizeMake(labelSize.width, CGRectGetHeight(self.bounds));
+        if (self.textAlignment == MRGMarqueeLabelTextAlignmentCenter) {
+            containerRect.origin.x = floorf((CGRectGetWidth(self.bounds) - CGRectGetWidth(containerRect)) * 0.5f);
+        }
+        self.contentView.layer.mask = nil;
+    } else {
+        containerRect.size.height = CGRectGetHeight(self.bounds);
+        containerRect.size.width = labelSize.width * 2 + self.gapWidth;
+        containerRect.origin.x = (self.textAlignment == MRGMarqueeLabelTextAlignmentLeft ? 0 : self.maskInset);
+        self.contentView.layer.mask = self.maskLayer;
+    }
+
+    self.labelsContainerView.frame = containerRect;
+
+    CGRect firstLabelFrame = self.firstLabel.frame;
+    firstLabelFrame.size = CGSizeMake(labelSize.width, CGRectGetHeight(self.bounds));
+    self.firstLabel.frame = firstLabelFrame;
+
+    CGRect secondLabelFrame = self.secondLabel.frame;
+    secondLabelFrame.size = CGSizeMake(labelSize.width, CGRectGetHeight(self.bounds));
+    secondLabelFrame.origin.x = self.firstLabel.frame.size.width + self.gapWidth;
+    self.secondLabel.frame = secondLabelFrame;
+    self.secondLabel.hidden = self.textFitsWidth;
+
+    [self handleAnimations];
+}
+
+- (void)handleAnimations {
+
+    CGFloat duration = CGRectGetWidth(self.firstLabel.bounds) / MAX(self.animationSpeed, 1);
+
+    CAAnimationGroup *scrollAnimGroup = [CAAnimationGroup animation];
+    scrollAnimGroup.beginTime = CACurrentMediaTime() + self.pause;
+    scrollAnimGroup.duration = duration + self.pause;
+    scrollAnimGroup.repeatCount = INFINITY;
+
+    CGFloat toValue = -(self.firstLabel.frame.size.width + self.gapWidth);
+    CABasicAnimation *scrollAnim = [CABasicAnimation animationWithKeyPath:@"transform.translation.x"];
+    scrollAnim.fromValue = @(0);
+    scrollAnim.toValue = @(toValue);
+    scrollAnim.duration = duration;
+    scrollAnim.fillMode = kCAFillModeBackwards;
+    scrollAnim.timingFunction = self.pause > 0 ? self.animationTimingFunction : [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    scrollAnimGroup.animations = @[scrollAnim];
+
+    if (!self.textFitsWidth) {
+        [self.labelsContainerView.layer removeAnimationForKey:@"marquee"];
+        [self.labelsContainerView.layer addAnimation:scrollAnimGroup forKey:@"marquee"];
+    }
+
+    CAAnimationGroup *maskAnimGroup = [CAAnimationGroup animation];
+    maskAnimGroup.beginTime = CACurrentMediaTime() + self.pause;
+    maskAnimGroup.duration = duration + self.pause;
+    maskAnimGroup.repeatCount = INFINITY;
+
+    CAKeyframeAnimation *maskColors = [CAKeyframeAnimation animationWithKeyPath:@"colors"];
+    maskColors.keyTimes = @[@0, @0.5, @1];
+    maskColors.values = @[
+            [self leftSideVisibleColors],
+            [self leftSideMaskedColors],
+            [self leftSideVisibleColors]
+    ];
+    maskColors.duration = duration;
+    maskColors.fillMode = kCAFillModeBackwards;
+    maskAnimGroup.animations = @[maskColors];
+
+    if (!self.textFitsWidth && self.textAlignment == MRGMarqueeLabelTextAlignmentLeft && self.pause > 0) {
+        [self.maskLayer removeAnimationForKey:@"mask"];
+        [self.maskLayer addAnimation:maskAnimGroup forKey:@"mask"];
+    }
+}
+
+- (NSArray *)leftSideMaskedColors {
+    return @[
+            (id)[UIColor clearColor].CGColor,
+            (id)[UIColor whiteColor].CGColor,
+            (id)[UIColor whiteColor].CGColor,
+            (id)[UIColor clearColor].CGColor
+    ];
+}
+
+- (NSArray *)leftSideVisibleColors {
+    return @[
+            (id)[UIColor whiteColor].CGColor,
+            (id)[UIColor whiteColor].CGColor,
+            (id)[UIColor whiteColor].CGColor,
+            (id)[UIColor clearColor].CGColor
+    ];
+}
+
+- (void)updateMaskGradientLocations {
+    if (!CGRectEqualToRect(self.bounds, CGRectZero)) {
+        CGFloat inset = self.maskInset / CGRectGetWidth(self.bounds);
+        self.maskLayer.locations = @[@0, @(inset), @(1 - inset), @1];
+    }
+}
+
+- (void)updateMaskColors {
+    NSArray *colors;
+    if (!self.textFitsWidth && (self.textAlignment == MRGMarqueeLabelTextAlignmentCenter || self.pause == 0)) {
+        colors = [self leftSideMaskedColors];
+    } else {
+        colors = [self leftSideVisibleColors];
+    }
+    self.maskLayer.colors = colors;
+}
+
+@end
