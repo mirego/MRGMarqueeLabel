@@ -1,6 +1,6 @@
 # MRGMarqueeLabel
 
-[![CI Status](http://img.shields.io/travis/Mirego/MRGMarqueeLabel.svg?style=flat)](https://travis-ci.org/Mirego/MRGMarqueeLabel)
+[![CI Status](http://img.shields.io/travis/mirego/MRGMarqueeLabel.svg?style=flat)](https://travis-ci.org/Mirego/MRGMarqueeLabel)
 [![Version](https://img.shields.io/cocoapods/v/MRGMarqueeLabel.svg?style=flat)](http://cocoadocs.org/docsets/MRGMarqueeLabel)
 [![License](https://img.shields.io/cocoapods/l/MRGMarqueeLabel.svg?style=flat)](http://cocoadocs.org/docsets/MRGMarqueeLabel)
 [![Platform](https://img.shields.io/cocoapods/p/MRGMarqueeLabel.svg?style=flat)](http://cocoadocs.org/docsets/MRGMarqueeLabel)
