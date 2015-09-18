@@ -243,7 +243,7 @@
 			attributes = {
 				CLASSPREFIX = MRG;
 				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = "Francois Lambert";
+				ORGANIZATIONNAME = "Mirego";
 				TargetAttributes = {
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
