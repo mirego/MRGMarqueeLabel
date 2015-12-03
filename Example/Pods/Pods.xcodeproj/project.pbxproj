@@ -7,155 +7,140 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2BFB86226A524461AA3242A8919DC6E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BE01DAA3F1CFF5E16682D0B1CDB153 /* Foundation.framework */; };
-		3E0CDCC71F00845D2E20C5ADA5361263 /* MRGMarqueeLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 53CF96022F11FCD626EBB63B9AC40756 /* MRGMarqueeLabel.h */; };
-		82D7E350999ADA5C169F59FACFF56385 /* MRGMarqueeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 594A26F1B74EA9D2B8BB7338CD96F866 /* MRGMarqueeLabel.m */; };
-		82E24B00B65D0AC7DA0E1B7FB96B364A /* Pods-MRGMarqueeLabel_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEACAFFC156BD3218CF067C2D367F96 /* Pods-MRGMarqueeLabel_Example-dummy.m */; };
-		A3CAB739403CACE59350EF2761382745 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BE01DAA3F1CFF5E16682D0B1CDB153 /* Foundation.framework */; };
-		C1798D9FBA2B7E50D076D2B1B4490659 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02BE01DAA3F1CFF5E16682D0B1CDB153 /* Foundation.framework */; };
-		D1C8867A7659FCAA7176FCFDA6E4D8A5 /* Pods-MRGMarqueeLabel_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB271F9AF791077CDEBD9EEAED2E2E4B /* Pods-MRGMarqueeLabel_Tests-dummy.m */; };
-		E570D7DA2D4D556C05A8F2981CE92CB6 /* MRGMarqueeLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E683A49940C90BADD2B60F20B027A3 /* MRGMarqueeLabel-dummy.m */; };
+		347CD40337820D51D3E87D8DE830C42C /* MRGMarqueeLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 897C6B2775CCB5401B13D85515BC7F75 /* MRGMarqueeLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43C9D8561BF2D6F13D1A643694D698FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		48E34259F98A856280673173847B3139 /* Pods-MRGMarqueeLabel_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B7496E6A4C376D92696DC3AF7FD0B4C8 /* Pods-MRGMarqueeLabel_Example-dummy.m */; };
+		5D0ACD5227BD87236B1A8385149BC036 /* MRGMarqueeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AE50E2E1024091A3F2805038F8FDA0A8 /* MRGMarqueeLabel.m */; };
+		7146FB2CBDEDE6537CAA4402E05256AA /* Pods-MRGMarqueeLabel_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4468173E9DFCD3BDF80151EC826F3B50 /* Pods-MRGMarqueeLabel_Tests-dummy.m */; };
+		A97716D5119DDFC7A6B572C528481DEF /* MRGMarqueeLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5899F7E0B2B4DF5F47AFAF0A29444146 /* MRGMarqueeLabel-dummy.m */; };
+		B76E86C9977555C2062DDAE38AEA6213 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		DDFDD2A5F5C550991475DBD145EC5C3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		130E993AC409168F83DD85683E6DA6C3 /* PBXContainerItemProxy */ = {
+		653FA783E18CD1D3A9C26B4E9DBA61FB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8AE2E4529B97BEA026BE7B95AF5AEEA9;
+			remoteGlobalIDString = F088066569D17C35F1F8B767C7AF621B;
 			remoteInfo = MRGMarqueeLabel;
 		};
-		3213FAF5427D2C65AB9269B6880EB08B /* PBXContainerItemProxy */ = {
+		6C7E03A1A175C56E4E590E217C84590B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8AE2E4529B97BEA026BE7B95AF5AEEA9;
+			remoteGlobalIDString = F088066569D17C35F1F8B767C7AF621B;
 			remoteInfo = MRGMarqueeLabel;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02BE01DAA3F1CFF5E16682D0B1CDB153 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		06E683A49940C90BADD2B60F20B027A3 /* MRGMarqueeLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MRGMarqueeLabel-dummy.m"; sourceTree = "<group>"; };
-		075E5614CEF56A0C27F6865E6D98A5BC /* MRGMarqueeLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MRGMarqueeLabel.xcconfig; sourceTree = "<group>"; };
-		0BEACAFFC156BD3218CF067C2D367F96 /* Pods-MRGMarqueeLabel_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MRGMarqueeLabel_Example-dummy.m"; sourceTree = "<group>"; };
-		0F0F0E79978BC8BEB334B8561CB2EEA4 /* Pods-MRGMarqueeLabel_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRGMarqueeLabel_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		29F9E9CB11DD34A5E045CD608DB34461 /* Pods-MRGMarqueeLabel_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRGMarqueeLabel_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		2C47918EF27EF6EA05296966ABA7187F /* Pods-MRGMarqueeLabel_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MRGMarqueeLabel_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3ECA6E39F4C91B371D9CC634A6A709AF /* libPods-MRGMarqueeLabel_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MRGMarqueeLabel_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		53CF96022F11FCD626EBB63B9AC40756 /* MRGMarqueeLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MRGMarqueeLabel.h; sourceTree = "<group>"; };
-		579368EE878D55C1FBA5AE2414CBE210 /* MRGMarqueeLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRGMarqueeLabel-prefix.pch"; sourceTree = "<group>"; };
-		594A26F1B74EA9D2B8BB7338CD96F866 /* MRGMarqueeLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MRGMarqueeLabel.m; sourceTree = "<group>"; };
-		714BD8BF87253B4CE31D3F83BE8632B0 /* Pods-MRGMarqueeLabel_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRGMarqueeLabel_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		795B7D7AF750A023262F200DB320BA9E /* Pods-MRGMarqueeLabel_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MRGMarqueeLabel_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		7A5873FD3764AA020FE64DB5FD3AD024 /* Pods-MRGMarqueeLabel_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MRGMarqueeLabel_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		885CEAFDB1CE580C1090B949DC492190 /* libPods-MRGMarqueeLabel_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MRGMarqueeLabel_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D26FCA707FE7F2EC852726A4E6C7421 /* Pods-MRGMarqueeLabel_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRGMarqueeLabel_Tests-resources.sh"; sourceTree = "<group>"; };
-		9558A7913596DECF3020C9BB33BCC858 /* libMRGMarqueeLabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMRGMarqueeLabel.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		965DB9AAF43E746EB8B46162713BB377 /* Pods-MRGMarqueeLabel_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRGMarqueeLabel_Example.release.xcconfig"; sourceTree = "<group>"; };
-		9701E97FE2757E0755BE2BC4504EA5DF /* Pods-MRGMarqueeLabel_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MRGMarqueeLabel_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		08650E039F1AEB0732B22C38612288CC /* Pods-MRGMarqueeLabel_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRGMarqueeLabel_Example-resources.sh"; sourceTree = "<group>"; };
+		0D18CA08621EFD3697B29502EE7F9192 /* MRGMarqueeLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MRGMarqueeLabel-prefix.pch"; sourceTree = "<group>"; };
+		0D38F9F2DBA5B561FAA7FC19E8FD8D74 /* Pods-MRGMarqueeLabel_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRGMarqueeLabel_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		39F683C04A5B231E3A11298AFA574A40 /* libPods-MRGMarqueeLabel_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MRGMarqueeLabel_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B2DAF42A6B59DAFCA86BDD6C445E13D /* Pods-MRGMarqueeLabel_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRGMarqueeLabel_Example-frameworks.sh"; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3FA85CE9500B62870E9C06D394838FD2 /* Pods-MRGMarqueeLabel_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MRGMarqueeLabel_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		4468173E9DFCD3BDF80151EC826F3B50 /* Pods-MRGMarqueeLabel_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MRGMarqueeLabel_Tests-dummy.m"; sourceTree = "<group>"; };
+		4796FB350C1BA0DA96CBC791B05C0666 /* MRGMarqueeLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MRGMarqueeLabel.xcconfig; sourceTree = "<group>"; };
+		4C74D844A9F7FD4D53CE12874F5E3CF4 /* Pods-MRGMarqueeLabel_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MRGMarqueeLabel_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4F167911EE986987BB60730E8E995D9E /* Pods-MRGMarqueeLabel_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRGMarqueeLabel_Tests-resources.sh"; sourceTree = "<group>"; };
+		57A3FD69BB56DFE204DC32B2AA61A103 /* libMRGMarqueeLabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMRGMarqueeLabel.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5899F7E0B2B4DF5F47AFAF0A29444146 /* MRGMarqueeLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MRGMarqueeLabel-dummy.m"; sourceTree = "<group>"; };
+		59A50314955BE2836749560C741390D7 /* Pods-MRGMarqueeLabel_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRGMarqueeLabel_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		6371C5830AB5C124DCF74DF3E17D1447 /* Pods-MRGMarqueeLabel_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRGMarqueeLabel_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		897C6B2775CCB5401B13D85515BC7F75 /* MRGMarqueeLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MRGMarqueeLabel.h; sourceTree = "<group>"; };
+		AE50E2E1024091A3F2805038F8FDA0A8 /* MRGMarqueeLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MRGMarqueeLabel.m; sourceTree = "<group>"; };
+		B35F301410AB9CB89892CB823FB90691 /* libPods-MRGMarqueeLabel_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MRGMarqueeLabel_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7496E6A4C376D92696DC3AF7FD0B4C8 /* Pods-MRGMarqueeLabel_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MRGMarqueeLabel_Example-dummy.m"; sourceTree = "<group>"; };
+		B9251B7C8D7992CF3BAF3BC4F44D4332 /* Pods-MRGMarqueeLabel_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MRGMarqueeLabel_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		ED4119F5972B113F41C218E81B7E509C /* MRGMarqueeLabel-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "MRGMarqueeLabel-Private.xcconfig"; sourceTree = "<group>"; };
-		FB271F9AF791077CDEBD9EEAED2E2E4B /* Pods-MRGMarqueeLabel_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MRGMarqueeLabel_Tests-dummy.m"; sourceTree = "<group>"; };
-		FF03804C55AB4183DCBB2932802932F5 /* Pods-MRGMarqueeLabel_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MRGMarqueeLabel_Example-resources.sh"; sourceTree = "<group>"; };
+		C408DA37D560B0CB558083141A54E17D /* Pods-MRGMarqueeLabel_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MRGMarqueeLabel_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C934DA197EF7CE6D1AA00288093FB87B /* Pods-MRGMarqueeLabel_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRGMarqueeLabel_Example.release.xcconfig"; sourceTree = "<group>"; };
+		FBAB2D554A5226575F886865B61938E0 /* Pods-MRGMarqueeLabel_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MRGMarqueeLabel_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6383FA6115291C4AB275048591C04F6B /* Frameworks */ = {
+		1FFF9A6A906EDF8F58545FF0C52254C1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1798D9FBA2B7E50D076D2B1B4490659 /* Foundation.framework in Frameworks */,
+				B76E86C9977555C2062DDAE38AEA6213 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		96FC5BC475C445AB34CEAC8353349154 /* Frameworks */ = {
+		6339871AF7221444B1A85932E178FC23 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BFB86226A524461AA3242A8919DC6E6 /* Foundation.framework in Frameworks */,
+				43C9D8561BF2D6F13D1A643694D698FA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F5A7D7BF1E6F8BB4A26C4250D33CA55F /* Frameworks */ = {
+		A3CEA72C5BC8E640BF87922EAFB95C7A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3CAB739403CACE59350EF2761382745 /* Foundation.framework in Frameworks */,
+				DDFDD2A5F5C550991475DBD145EC5C3F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0A100075B5969F83D5AB37C9830FF6B8 /* Development Pods */ = {
+		08E5460AFA5B1A7DF4C4DE90CE8B2934 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2D0283FC3742AFF6FE72DD3F790F8511 /* MRGMarqueeLabel */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		2A3FA1640BDD4128F7F4DCC10009D09D /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				075E5614CEF56A0C27F6865E6D98A5BC /* MRGMarqueeLabel.xcconfig */,
-				ED4119F5972B113F41C218E81B7E509C /* MRGMarqueeLabel-Private.xcconfig */,
-				06E683A49940C90BADD2B60F20B027A3 /* MRGMarqueeLabel-dummy.m */,
-				579368EE878D55C1FBA5AE2414CBE210 /* MRGMarqueeLabel-prefix.pch */,
+				4796FB350C1BA0DA96CBC791B05C0666 /* MRGMarqueeLabel.xcconfig */,
+				5899F7E0B2B4DF5F47AFAF0A29444146 /* MRGMarqueeLabel-dummy.m */,
+				0D18CA08621EFD3697B29502EE7F9192 /* MRGMarqueeLabel-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/MRGMarqueeLabel";
 			sourceTree = "<group>";
 		};
-		2D0283FC3742AFF6FE72DD3F790F8511 /* MRGMarqueeLabel */ = {
+		0A100075B5969F83D5AB37C9830FF6B8 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A127ECB5FAAA7C736302D44F1DD9A15D /* Pod */,
-				2A3FA1640BDD4128F7F4DCC10009D09D /* Support Files */,
+				2F0B448AFA547E2BA4C1B702F271EB77 /* MRGMarqueeLabel */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		2F0B448AFA547E2BA4C1B702F271EB77 /* MRGMarqueeLabel */ = {
+			isa = PBXGroup;
+			children = (
+				89C4089A8AB3BF1279721C15DBC8643E /* Pod */,
+				08E5460AFA5B1A7DF4C4DE90CE8B2934 /* Support Files */,
 			);
 			name = MRGMarqueeLabel;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		4E1ABC81B4E332226CE21EB98A0FAC16 /* Pods-MRGMarqueeLabel_Example */ = {
+		5E9B634359D984F002B5A2171E9DFFD3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9701E97FE2757E0755BE2BC4504EA5DF /* Pods-MRGMarqueeLabel_Example-acknowledgements.markdown */,
-				7A5873FD3764AA020FE64DB5FD3AD024 /* Pods-MRGMarqueeLabel_Example-acknowledgements.plist */,
-				0BEACAFFC156BD3218CF067C2D367F96 /* Pods-MRGMarqueeLabel_Example-dummy.m */,
-				FF03804C55AB4183DCBB2932802932F5 /* Pods-MRGMarqueeLabel_Example-resources.sh */,
-				714BD8BF87253B4CE31D3F83BE8632B0 /* Pods-MRGMarqueeLabel_Example.debug.xcconfig */,
-				965DB9AAF43E746EB8B46162713BB377 /* Pods-MRGMarqueeLabel_Example.release.xcconfig */,
+				57A3FD69BB56DFE204DC32B2AA61A103 /* libMRGMarqueeLabel.a */,
+				B35F301410AB9CB89892CB823FB90691 /* libPods-MRGMarqueeLabel_Example.a */,
+				39F683C04A5B231E3A11298AFA574A40 /* libPods-MRGMarqueeLabel_Tests.a */,
 			);
-			name = "Pods-MRGMarqueeLabel_Example";
-			path = "Target Support Files/Pods-MRGMarqueeLabel_Example";
+			name = Products;
 			sourceTree = "<group>";
 		};
-		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
+		6421BE7A580A6EB6F452E7B8BDBF4FFF /* Pods-MRGMarqueeLabel_Tests */ = {
 			isa = PBXGroup;
 			children = (
-				02BE01DAA3F1CFF5E16682D0B1CDB153 /* Foundation.framework */,
+				B9251B7C8D7992CF3BAF3BC4F44D4332 /* Pods-MRGMarqueeLabel_Tests-acknowledgements.markdown */,
+				C408DA37D560B0CB558083141A54E17D /* Pods-MRGMarqueeLabel_Tests-acknowledgements.plist */,
+				4468173E9DFCD3BDF80151EC826F3B50 /* Pods-MRGMarqueeLabel_Tests-dummy.m */,
+				0D38F9F2DBA5B561FAA7FC19E8FD8D74 /* Pods-MRGMarqueeLabel_Tests-frameworks.sh */,
+				4F167911EE986987BB60730E8E995D9E /* Pods-MRGMarqueeLabel_Tests-resources.sh */,
+				6371C5830AB5C124DCF74DF3E17D1447 /* Pods-MRGMarqueeLabel_Tests.debug.xcconfig */,
+				59A50314955BE2836749560C741390D7 /* Pods-MRGMarqueeLabel_Tests.release.xcconfig */,
 			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		54AAD002EEEFE22C5306A155E25D2137 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				53CF96022F11FCD626EBB63B9AC40756 /* MRGMarqueeLabel.h */,
-				594A26F1B74EA9D2B8BB7338CD96F866 /* MRGMarqueeLabel.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		5A930754D079BCA48ABFD50239CC9DC1 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				4E1ABC81B4E332226CE21EB98A0FAC16 /* Pods-MRGMarqueeLabel_Example */,
-				FF5C5C8C6B10101DC7E0C06A894043D8 /* Pods-MRGMarqueeLabel_Tests */,
-			);
-			name = "Targets Support Files";
+			name = "Pods-MRGMarqueeLabel_Tests";
+			path = "Target Support Files/Pods-MRGMarqueeLabel_Tests";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -164,89 +149,123 @@
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				0A100075B5969F83D5AB37C9830FF6B8 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
-				5A930754D079BCA48ABFD50239CC9DC1 /* Targets Support Files */,
+				5E9B634359D984F002B5A2171E9DFFD3 /* Products */,
+				D9928A59C73A0CED7C419EB3F4FB5356 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A127ECB5FAAA7C736302D44F1DD9A15D /* Pod */ = {
+		89C4089A8AB3BF1279721C15DBC8643E /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				54AAD002EEEFE22C5306A155E25D2137 /* Classes */,
+				A4F740CEFF4EB95C1C0FAAE774E88B38 /* Classes */,
 			);
 			path = Pod;
+			sourceTree = "<group>";
+		};
+		901DF6CB013B1AAB6497930244579B56 /* Pods-MRGMarqueeLabel_Example */ = {
+			isa = PBXGroup;
+			children = (
+				4C74D844A9F7FD4D53CE12874F5E3CF4 /* Pods-MRGMarqueeLabel_Example-acknowledgements.markdown */,
+				3FA85CE9500B62870E9C06D394838FD2 /* Pods-MRGMarqueeLabel_Example-acknowledgements.plist */,
+				B7496E6A4C376D92696DC3AF7FD0B4C8 /* Pods-MRGMarqueeLabel_Example-dummy.m */,
+				3B2DAF42A6B59DAFCA86BDD6C445E13D /* Pods-MRGMarqueeLabel_Example-frameworks.sh */,
+				08650E039F1AEB0732B22C38612288CC /* Pods-MRGMarqueeLabel_Example-resources.sh */,
+				FBAB2D554A5226575F886865B61938E0 /* Pods-MRGMarqueeLabel_Example.debug.xcconfig */,
+				C934DA197EF7CE6D1AA00288093FB87B /* Pods-MRGMarqueeLabel_Example.release.xcconfig */,
+			);
+			name = "Pods-MRGMarqueeLabel_Example";
+			path = "Target Support Files/Pods-MRGMarqueeLabel_Example";
+			sourceTree = "<group>";
+		};
+		A4F740CEFF4EB95C1C0FAAE774E88B38 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				897C6B2775CCB5401B13D85515BC7F75 /* MRGMarqueeLabel.h */,
+				AE50E2E1024091A3F2805038F8FDA0A8 /* MRGMarqueeLabel.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				53F661C0CA7190D2CF05023FB33D61E4 /* iOS */,
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				9558A7913596DECF3020C9BB33BCC858 /* libMRGMarqueeLabel.a */,
-				3ECA6E39F4C91B371D9CC634A6A709AF /* libPods-MRGMarqueeLabel_Example.a */,
-				885CEAFDB1CE580C1090B949DC492190 /* libPods-MRGMarqueeLabel_Tests.a */,
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
 			);
-			name = Products;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		FF5C5C8C6B10101DC7E0C06A894043D8 /* Pods-MRGMarqueeLabel_Tests */ = {
+		D9928A59C73A0CED7C419EB3F4FB5356 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2C47918EF27EF6EA05296966ABA7187F /* Pods-MRGMarqueeLabel_Tests-acknowledgements.markdown */,
-				795B7D7AF750A023262F200DB320BA9E /* Pods-MRGMarqueeLabel_Tests-acknowledgements.plist */,
-				FB271F9AF791077CDEBD9EEAED2E2E4B /* Pods-MRGMarqueeLabel_Tests-dummy.m */,
-				8D26FCA707FE7F2EC852726A4E6C7421 /* Pods-MRGMarqueeLabel_Tests-resources.sh */,
-				29F9E9CB11DD34A5E045CD608DB34461 /* Pods-MRGMarqueeLabel_Tests.debug.xcconfig */,
-				0F0F0E79978BC8BEB334B8561CB2EEA4 /* Pods-MRGMarqueeLabel_Tests.release.xcconfig */,
+				901DF6CB013B1AAB6497930244579B56 /* Pods-MRGMarqueeLabel_Example */,
+				6421BE7A580A6EB6F452E7B8BDBF4FFF /* Pods-MRGMarqueeLabel_Tests */,
 			);
-			name = "Pods-MRGMarqueeLabel_Tests";
-			path = "Target Support Files/Pods-MRGMarqueeLabel_Tests";
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		F620504F3D5CA351656E8852901C9F6F /* Headers */ = {
+		164B75D4386A4D382654ACE223DA826B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E0CDCC71F00845D2E20C5ADA5361263 /* MRGMarqueeLabel.h in Headers */,
+				347CD40337820D51D3E87D8DE830C42C /* MRGMarqueeLabel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		523380DAEBFD502E4C30D3BB12341380 /* Pods-MRGMarqueeLabel_Tests */ = {
+		066A79F10E3F5D048C2727393774BE12 /* Pods-MRGMarqueeLabel_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E011FE7E51C436FFF1EC4F90CEFB1954 /* Build configuration list for PBXNativeTarget "Pods-MRGMarqueeLabel_Tests" */;
+			buildConfigurationList = A91E176C539C7F9367E5910497D37289 /* Build configuration list for PBXNativeTarget "Pods-MRGMarqueeLabel_Tests" */;
 			buildPhases = (
-				F193BAD5D1B326235885128BB1B016BD /* Sources */,
-				F5A7D7BF1E6F8BB4A26C4250D33CA55F /* Frameworks */,
+				64642C56CECE52FBBED2378B82BFFD05 /* Sources */,
+				6339871AF7221444B1A85932E178FC23 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				405F46A00D1CDA52E56F767F63EDBBAE /* PBXTargetDependency */,
+				EE98913BD0D76B0B0CBD669D24F66CB8 /* PBXTargetDependency */,
 			);
 			name = "Pods-MRGMarqueeLabel_Tests";
 			productName = "Pods-MRGMarqueeLabel_Tests";
-			productReference = 885CEAFDB1CE580C1090B949DC492190 /* libPods-MRGMarqueeLabel_Tests.a */;
+			productReference = 39F683C04A5B231E3A11298AFA574A40 /* libPods-MRGMarqueeLabel_Tests.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		8AE2E4529B97BEA026BE7B95AF5AEEA9 /* MRGMarqueeLabel */ = {
+		DD053383173C3316073714A29B7BD067 /* Pods-MRGMarqueeLabel_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BAB4D29F8B0018A3AF0E82DA09971897 /* Build configuration list for PBXNativeTarget "MRGMarqueeLabel" */;
+			buildConfigurationList = 28C534E024DA470B657A944EFAABD6B2 /* Build configuration list for PBXNativeTarget "Pods-MRGMarqueeLabel_Example" */;
 			buildPhases = (
-				E7C915CFE7A5F4D4F2976A28FDF40BBA /* Sources */,
-				96FC5BC475C445AB34CEAC8353349154 /* Frameworks */,
-				F620504F3D5CA351656E8852901C9F6F /* Headers */,
+				7291D4CDACFCDD3AAEB75D73F9E879B2 /* Sources */,
+				1FFF9A6A906EDF8F58545FF0C52254C1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2E3884433E85E00B09EE7B9C1E0B897 /* PBXTargetDependency */,
+			);
+			name = "Pods-MRGMarqueeLabel_Example";
+			productName = "Pods-MRGMarqueeLabel_Example";
+			productReference = B35F301410AB9CB89892CB823FB90691 /* libPods-MRGMarqueeLabel_Example.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F088066569D17C35F1F8B767C7AF621B /* MRGMarqueeLabel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E64DCE2158CA671B1F850C5B01F0649 /* Build configuration list for PBXNativeTarget "MRGMarqueeLabel" */;
+			buildPhases = (
+				5FE5CD56654C4EFF1DF4EEF9FEA712A1 /* Sources */,
+				A3CEA72C5BC8E640BF87922EAFB95C7A /* Frameworks */,
+				164B75D4386A4D382654ACE223DA826B /* Headers */,
 			);
 			buildRules = (
 			);
@@ -254,24 +273,7 @@
 			);
 			name = MRGMarqueeLabel;
 			productName = MRGMarqueeLabel;
-			productReference = 9558A7913596DECF3020C9BB33BCC858 /* libMRGMarqueeLabel.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		CD2B6E886929CD957EC65C4EBBB62579 /* Pods-MRGMarqueeLabel_Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 05D1968DCC6D116D6287D9BC558CCF69 /* Build configuration list for PBXNativeTarget "Pods-MRGMarqueeLabel_Example" */;
-			buildPhases = (
-				B534CBC278A5E878C425A59639028075 /* Sources */,
-				6383FA6115291C4AB275048591C04F6B /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2A77C555AE7A939CC3CD43E1B3E78C16 /* PBXTargetDependency */,
-			);
-			name = "Pods-MRGMarqueeLabel_Example";
-			productName = "Pods-MRGMarqueeLabel_Example";
-			productReference = 3ECA6E39F4C91B371D9CC634A6A709AF /* libPods-MRGMarqueeLabel_Example.a */;
+			productReference = 57A3FD69BB56DFE204DC32B2AA61A103 /* libMRGMarqueeLabel.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -291,57 +293,57 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			productRefGroup = 5E9B634359D984F002B5A2171E9DFFD3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8AE2E4529B97BEA026BE7B95AF5AEEA9 /* MRGMarqueeLabel */,
-				CD2B6E886929CD957EC65C4EBBB62579 /* Pods-MRGMarqueeLabel_Example */,
-				523380DAEBFD502E4C30D3BB12341380 /* Pods-MRGMarqueeLabel_Tests */,
+				F088066569D17C35F1F8B767C7AF621B /* MRGMarqueeLabel */,
+				DD053383173C3316073714A29B7BD067 /* Pods-MRGMarqueeLabel_Example */,
+				066A79F10E3F5D048C2727393774BE12 /* Pods-MRGMarqueeLabel_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B534CBC278A5E878C425A59639028075 /* Sources */ = {
+		5FE5CD56654C4EFF1DF4EEF9FEA712A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82E24B00B65D0AC7DA0E1B7FB96B364A /* Pods-MRGMarqueeLabel_Example-dummy.m in Sources */,
+				A97716D5119DDFC7A6B572C528481DEF /* MRGMarqueeLabel-dummy.m in Sources */,
+				5D0ACD5227BD87236B1A8385149BC036 /* MRGMarqueeLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E7C915CFE7A5F4D4F2976A28FDF40BBA /* Sources */ = {
+		64642C56CECE52FBBED2378B82BFFD05 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E570D7DA2D4D556C05A8F2981CE92CB6 /* MRGMarqueeLabel-dummy.m in Sources */,
-				82D7E350999ADA5C169F59FACFF56385 /* MRGMarqueeLabel.m in Sources */,
+				7146FB2CBDEDE6537CAA4402E05256AA /* Pods-MRGMarqueeLabel_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F193BAD5D1B326235885128BB1B016BD /* Sources */ = {
+		7291D4CDACFCDD3AAEB75D73F9E879B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1C8867A7659FCAA7176FCFDA6E4D8A5 /* Pods-MRGMarqueeLabel_Tests-dummy.m in Sources */,
+				48E34259F98A856280673173847B3139 /* Pods-MRGMarqueeLabel_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2A77C555AE7A939CC3CD43E1B3E78C16 /* PBXTargetDependency */ = {
+		C2E3884433E85E00B09EE7B9C1E0B897 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MRGMarqueeLabel;
-			target = 8AE2E4529B97BEA026BE7B95AF5AEEA9 /* MRGMarqueeLabel */;
-			targetProxy = 130E993AC409168F83DD85683E6DA6C3 /* PBXContainerItemProxy */;
+			target = F088066569D17C35F1F8B767C7AF621B /* MRGMarqueeLabel */;
+			targetProxy = 6C7E03A1A175C56E4E590E217C84590B /* PBXContainerItemProxy */;
 		};
-		405F46A00D1CDA52E56F767F63EDBBAE /* PBXTargetDependency */ = {
+		EE98913BD0D76B0B0CBD669D24F66CB8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MRGMarqueeLabel;
-			target = 8AE2E4529B97BEA026BE7B95AF5AEEA9 /* MRGMarqueeLabel */;
-			targetProxy = 3213FAF5427D2C65AB9269B6880EB08B /* PBXContainerItemProxy */;
+			target = F088066569D17C35F1F8B767C7AF621B /* MRGMarqueeLabel */;
+			targetProxy = 653FA783E18CD1D3A9C26B4E9DBA61FB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -419,28 +421,13 @@
 			};
 			name = Debug;
 		};
-		15D789F005EACDA6D5A4C180A65CAD5A /* Release */ = {
+		230A204B4950C34952B4B1CFBEB6CF1E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED4119F5972B113F41C218E81B7E509C /* MRGMarqueeLabel-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MRGMarqueeLabel/MRGMarqueeLabel-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		23D42874398F58C2CE3FF65FB40BCC01 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 965DB9AAF43E746EB8B46162713BB377 /* Pods-MRGMarqueeLabel_Example.release.xcconfig */;
+			baseConfigurationReference = C934DA197EF7CE6D1AA00288093FB87B /* Pods-MRGMarqueeLabel_Example.release.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -451,28 +438,13 @@
 			};
 			name = Release;
 		};
-		3004B427E02310BAB8F172AAC21E3C20 /* Release */ = {
+		7D30162AF9DE3969234E28BE106C8249 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F0F0E79978BC8BEB334B8561CB2EEA4 /* Pods-MRGMarqueeLabel_Tests.release.xcconfig */;
+			baseConfigurationReference = FBAB2D554A5226575F886865B61938E0 /* Pods-MRGMarqueeLabel_Example.debug.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		36EE9CEF3F587ACDC6FB95C737CF2F2E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 29F9E9CB11DD34A5E045CD608DB34461 /* Pods-MRGMarqueeLabel_Tests.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -483,9 +455,26 @@
 			};
 			name = Debug;
 		};
-		A491E9A1D6033DA5EBE1B801B60E86B6 /* Debug */ = {
+		AB4DCC41AE9CE62C654A12F0DA62DCD6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED4119F5972B113F41C218E81B7E509C /* MRGMarqueeLabel-Private.xcconfig */;
+			baseConfigurationReference = 59A50314955BE2836749560C741390D7 /* Pods-MRGMarqueeLabel_Tests.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		BC1022FF093953973858E996EF145FBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4796FB350C1BA0DA96CBC791B05C0666 /* MRGMarqueeLabel.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/MRGMarqueeLabel/MRGMarqueeLabel-prefix.pch";
@@ -493,18 +482,21 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		BE4AB0C9B2BBDBE2E63400541ED9A9FB /* Debug */ = {
+		C46DA93779E9176EC0DDBFB9AA8717A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 714BD8BF87253B4CE31D3F83BE8632B0 /* Pods-MRGMarqueeLabel_Example.debug.xcconfig */;
+			baseConfigurationReference = 6371C5830AB5C124DCF74DF3E17D1447 /* Pods-MRGMarqueeLabel_Tests.debug.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -514,15 +506,42 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
+		};
+		DC556AE1489F320301C63266FD4874E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4796FB350C1BA0DA96CBC791B05C0666 /* MRGMarqueeLabel.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MRGMarqueeLabel/MRGMarqueeLabel-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		05D1968DCC6D116D6287D9BC558CCF69 /* Build configuration list for PBXNativeTarget "Pods-MRGMarqueeLabel_Example" */ = {
+		1E64DCE2158CA671B1F850C5B01F0649 /* Build configuration list for PBXNativeTarget "MRGMarqueeLabel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BE4AB0C9B2BBDBE2E63400541ED9A9FB /* Debug */,
-				23D42874398F58C2CE3FF65FB40BCC01 /* Release */,
+				BC1022FF093953973858E996EF145FBD /* Debug */,
+				DC556AE1489F320301C63266FD4874E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28C534E024DA470B657A944EFAABD6B2 /* Build configuration list for PBXNativeTarget "Pods-MRGMarqueeLabel_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D30162AF9DE3969234E28BE106C8249 /* Debug */,
+				230A204B4950C34952B4B1CFBEB6CF1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -536,20 +555,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BAB4D29F8B0018A3AF0E82DA09971897 /* Build configuration list for PBXNativeTarget "MRGMarqueeLabel" */ = {
+		A91E176C539C7F9367E5910497D37289 /* Build configuration list for PBXNativeTarget "Pods-MRGMarqueeLabel_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A491E9A1D6033DA5EBE1B801B60E86B6 /* Debug */,
-				15D789F005EACDA6D5A4C180A65CAD5A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E011FE7E51C436FFF1EC4F90CEFB1954 /* Build configuration list for PBXNativeTarget "Pods-MRGMarqueeLabel_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				36EE9CEF3F587ACDC6FB95C737CF2F2E /* Debug */,
-				3004B427E02310BAB8F172AAC21E3C20 /* Release */,
+				C46DA93779E9176EC0DDBFB9AA8717A8 /* Debug */,
+				AB4DCC41AE9CE62C654A12F0DA62DCD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

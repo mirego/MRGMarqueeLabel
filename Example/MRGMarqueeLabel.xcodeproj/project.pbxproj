@@ -205,6 +205,7 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				AE4D2F7FFC19247D53EA845C /* Copy Pods Resources */,
+				B49BE5BCDD0F9198A2891B9F /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -224,6 +225,7 @@
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
 				CA375EBA50CF7D297C23F6EF /* Copy Pods Resources */,
+				22B7B642554DBA6C39544E3C /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,7 +245,7 @@
 			attributes = {
 				CLASSPREFIX = MRG;
 				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = "Mirego";
+				ORGANIZATIONNAME = Mirego;
 				TargetAttributes = {
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -291,6 +293,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		22B7B642554DBA6C39544E3C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MRGMarqueeLabel_Tests/Pods-MRGMarqueeLabel_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		46EF891F8F34D93CE1A1BB64 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -319,6 +336,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MRGMarqueeLabel_Example/Pods-MRGMarqueeLabel_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B49BE5BCDD0F9198A2891B9F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MRGMarqueeLabel_Example/Pods-MRGMarqueeLabel_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CA375EBA50CF7D297C23F6EF /* Copy Pods Resources */ = {
