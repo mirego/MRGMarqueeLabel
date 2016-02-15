@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2014-2015, Mirego
+// Copyright (c) 2014-2016, Mirego
 // All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -34,14 +34,15 @@ typedef NS_ENUM(NSInteger, MRGMarqueeLabelTextAlignment) {
 };
 
 @interface MRGMarqueeLabel : UIView
+
 @property (nonatomic) CGFloat animationSpeed; // Marquee animation speed in pixels per second.
 @property (nonatomic) CAMediaTimingFunction *animationTimingFunction; // Marquee animation timing function.  Default is ease-in-ease-out.
 @property (nonatomic) CGFloat pause; // Delay in seconds between marquee animations.
 @property (nonatomic) CGFloat maskInset; // Left and right gradient mask inset.
 @property (nonatomic) CGFloat gapWidth; // Blank space shown before displaying the text again.
 @property (nonatomic) NSString *text;
-@property (nonatomic) UIFont *font;
 @property (nonatomic) UIColor *textColor;
+@property (nonatomic) UIFont *font;
 @property (nonatomic) MRGMarqueeLabelTextAlignment textAlignment;
 
 - (instancetype)initWithFrame:(CGRect)frame text:(NSString *)text;
