@@ -1,5 +1,5 @@
 PODS:
-  - MRGMarqueeLabel (0.1.1)
+  - MRGMarqueeLabel (1.0.1)
 
 DEPENDENCIES:
   - MRGMarqueeLabel (from `../`)
@@ -9,6 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MRGMarqueeLabel: df2e55d1599ea4daa2188da73603b2641c650713
+  MRGMarqueeLabel: 5cdb912fa7796eab604543f86455450b90280235
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 456d3c1f8f23944e4f7dac31abe5e92fc49149fb
+
+COCOAPODS: 1.0.1
