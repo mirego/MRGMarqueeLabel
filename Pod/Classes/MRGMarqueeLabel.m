@@ -37,7 +37,6 @@
 @property (nonatomic, readonly) CAGradientLayer *maskLayer;
 @property (nonatomic) BOOL textFitsWidth;
 @property (nonatomic) BOOL needsAnimationReset;
-@property (nonatomic) CGRect previousRect;
 @end
 
 @implementation MRGMarqueeLabel
@@ -86,9 +85,8 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    if (self.needsAnimationReset || !CGRectEqualToRect(self.previousRect, self.bounds)) {
+    if (self.needsAnimationReset || !CGRectEqualToRect(self.contentView.bounds, self.bounds)) {
         self.needsAnimationReset = NO;
-        self.previousRect = self.bounds;
         
         self.contentView.frame = self.bounds;
         self.maskLayer.bounds = self.bounds;
