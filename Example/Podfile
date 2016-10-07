@@ -1,11 +1,7 @@
-source 'https://github.com/CocoaPods/Specs.git'
+target 'MRGMarqueeLabel_Example' do
+  pod 'MRGMarqueeLabel', :path => '../'
 
-target 'MRGMarqueeLabel_Example', :exclusive => true do
-  pod "MRGMarqueeLabel", :path => "../"
-end
-
-target 'MRGMarqueeLabel_Tests', :exclusive => true do
-  pod "MRGMarqueeLabel", :path => "../"
-
-  
+  target 'MRGMarqueeLabel_Tests' do
+    inherit! :search_paths
+  end
 end

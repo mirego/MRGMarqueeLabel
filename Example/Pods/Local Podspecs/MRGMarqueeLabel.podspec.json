@@ -1,6 +1,6 @@
 {
   "name": "MRGMarqueeLabel",
-  "version": "0.1.1",
+  "version": "1.0.1",
   "summary": "A label with a marquee effect.",
   "homepage": "https://github.com/Mirego/MRGMarqueeLabel",
   "license": "BSD 3-Clause",
@@ -9,7 +9,7 @@
   },
   "source": {
     "git": "https://github.com/Mirego/MRGMarqueeLabel.git",
-    "tag": "0.1.1"
+    "tag": "1.0.1"
   },
   "social_media_url": "https://twitter.com/Mirego",
   "platforms": {
