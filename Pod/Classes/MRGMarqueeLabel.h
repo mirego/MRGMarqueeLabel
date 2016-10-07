@@ -46,4 +46,6 @@ typedef NS_ENUM(NSInteger, MRGMarqueeLabelTextAlignment) {
 @property (nonatomic) MRGMarqueeLabelTextAlignment textAlignment;
 
 - (instancetype)initWithFrame:(CGRect)frame text:(NSString *)text;
+
+- (void)setNeedsAnimationReset;
 @end

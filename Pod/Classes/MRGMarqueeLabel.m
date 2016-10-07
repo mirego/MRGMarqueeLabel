@@ -36,6 +36,8 @@
 @property (nonatomic, readonly) UILabel *secondLabel;
 @property (nonatomic, readonly) CAGradientLayer *maskLayer;
 @property (nonatomic) BOOL textFitsWidth;
+@property (nonatomic) BOOL needsAnimationReset;
+@property (nonatomic) CGRect previousRect;
 @end
 
 @implementation MRGMarqueeLabel
@@ -50,17 +52,17 @@
         _animationSpeed = 100;
         _animationTimingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
         _pause = 1;
-        _gapWidth = 100.0f;
+        _gapWidth = 100;
         
-        [self addSubview:(_contentView = [[UIView alloc] init])];
+        [self addSubview:(_contentView = [UIView new])];
         
-        [self.contentView addSubview:(_labelsContainerView = [[UIView alloc] init])];
+        [self.contentView addSubview:(_labelsContainerView = [UIView new])];
         
-        [self.labelsContainerView addSubview:(_firstLabel = [[UILabel alloc] init])];
+        [self.labelsContainerView addSubview:(_firstLabel = [UILabel new])];
         self.firstLabel.backgroundColor = [UIColor clearColor];
         self.firstLabel.text = text;
         
-        [self.labelsContainerView addSubview:(_secondLabel = [[UILabel alloc] init])];
+        [self.labelsContainerView addSubview:(_secondLabel = [UILabel new])];
         self.secondLabel.backgroundColor = [UIColor clearColor];
         
         _maskLayer = [CAGradientLayer layer];
@@ -73,18 +75,6 @@
     return self;
 }
 
-- (void)setFrame:(CGRect)frame {
-    if (!CGRectEqualToRect(self.frame, frame)) {
-        [super setFrame:frame];
-        
-        self.contentView.frame = self.bounds;
-        self.maskLayer.bounds = self.bounds;
-        self.maskLayer.position = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
-        [self updateMaskGradientLocations];
-        [self setNeedsLayout];
-    }
-}
-
 - (CGSize)sizeThatFits:(CGSize)size {
     return [self.firstLabel sizeThatFits:size];
 }
@@ -95,7 +85,23 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    [self layoutLabels];
+    
+    if (self.needsAnimationReset || !CGRectEqualToRect(self.previousRect, self.bounds)) {
+        self.needsAnimationReset = NO;
+        self.previousRect = self.bounds;
+        
+        self.contentView.frame = self.bounds;
+        self.maskLayer.bounds = self.bounds;
+        self.maskLayer.position = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
+        
+        [self updateMaskGradientLocations];
+        [self layoutLabels];
+    }
+}
+
+- (void)setNeedsAnimationReset {
+    self.needsAnimationReset = YES;
+    [self setNeedsLayout];
 }
 
 #pragma mark - Getters and Setters
@@ -103,35 +109,42 @@
 - (void)setAnimationSpeed:(CGFloat)animationSpeed {
     if (_animationSpeed != animationSpeed) {
         _animationSpeed = animationSpeed;
-        [self setNeedsLayout];
+        
+        [self setNeedsAnimationReset];
     }
 }
 
 - (void)setAnimationTimingFunction:(CAMediaTimingFunction *)animationTimingFunction {
-    _animationTimingFunction = animationTimingFunction;
-    [self setNeedsLayout];
+    if (_animationTimingFunction != animationTimingFunction) {
+        _animationTimingFunction = animationTimingFunction;
+        
+        [self setNeedsAnimationReset];
+    }
 }
 
 - (void)setPause:(CGFloat)pause {
     if (_pause != pause) {
         _pause = pause;
+        
         [self updateMaskColors];
-        [self setNeedsLayout];
+        [self setNeedsAnimationReset];
     }
 }
 
 - (void)setMaskInset:(CGFloat)maskInset {
     if (_maskInset != maskInset) {
         _maskInset = maskInset;
+        
         [self updateMaskGradientLocations];
-        [self setNeedsLayout];
+        [self setNeedsAnimationReset];
     }
 }
 
 - (void)setGapWidth:(CGFloat)gapWidth {
     if (_gapWidth != gapWidth) {
         _gapWidth = gapWidth;
-        [self setNeedsLayout];
+        
+        [self setNeedsAnimationReset];
     }
 }
 
@@ -143,7 +156,8 @@
     if (![self.firstLabel.text isEqualToString:text]) {
         self.firstLabel.text = text;
         self.secondLabel.text = text;
-        [self setNeedsLayout];
+        
+        [self setNeedsAnimationReset];
     }
 }
 
@@ -166,15 +180,17 @@
     if (![self.firstLabel.font isEqual:font]) {
         self.firstLabel.font = font;
         self.secondLabel.font = font;
-        [self setNeedsLayout];
+        
+        [self setNeedsAnimationReset];
     }
 }
 
 - (void)setTextAlignment:(MRGMarqueeLabelTextAlignment)textAlignment {
     if (_textAlignment != textAlignment) {
         _textAlignment = textAlignment;
+        
         [self updateMaskColors];
-        [self setNeedsLayout];
+        [self setNeedsAnimationReset];
     }
 }
 
@@ -194,11 +210,14 @@
         if (self.textAlignment == MRGMarqueeLabelTextAlignmentCenter) {
             containerRect.origin.x = floorf((CGRectGetWidth(self.bounds) - CGRectGetWidth(containerRect)) * 0.5f);
         }
+        
         self.contentView.layer.mask = nil;
+        
     } else {
         containerRect.size.height = CGRectGetHeight(self.bounds);
         containerRect.size.width = labelSize.width * 2 + self.gapWidth;
         containerRect.origin.x = (self.textAlignment == MRGMarqueeLabelTextAlignmentLeft ? 0 : self.maskInset);
+        
         self.contentView.layer.mask = self.maskLayer;
     }
     
@@ -265,19 +284,19 @@
 
 - (NSArray *)leftSideMaskedColors {
     return @[
-             (id)[UIColor clearColor].CGColor,
-             (id)[UIColor whiteColor].CGColor,
-             (id)[UIColor whiteColor].CGColor,
-             (id)[UIColor clearColor].CGColor
+             (id)UIColor.clearColor.CGColor,
+             (id)UIColor.whiteColor.CGColor,
+             (id)UIColor.whiteColor.CGColor,
+             (id)UIColor.clearColor.CGColor
              ];
 }
 
 - (NSArray *)leftSideVisibleColors {
     return @[
-             (id)[UIColor whiteColor].CGColor,
-             (id)[UIColor whiteColor].CGColor,
-             (id)[UIColor whiteColor].CGColor,
-             (id)[UIColor clearColor].CGColor
+             (id)UIColor.whiteColor.CGColor,
+             (id)UIColor.whiteColor.CGColor,
+             (id)UIColor.whiteColor.CGColor,
+             (id)UIColor.clearColor.CGColor
              ];
 }
 
