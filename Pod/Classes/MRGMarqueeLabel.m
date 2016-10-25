@@ -28,7 +28,7 @@
 
 #import "MRGMarqueeLabel.h"
 
-@interface MRGMarqueeLabel () <CAAnimationDelegate>
+@interface MRGMarqueeLabel ()
 
 @property (nonatomic, readonly) UIView *contentView;
 @property (nonatomic, readonly) UIView *labelsContainerView;
