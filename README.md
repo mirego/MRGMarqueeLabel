@@ -19,7 +19,7 @@ pod 'MRGMarqueeLabel', :git => 'https://github.com/mirego/MRGMarqueeLabel.iOS.gi
 
 ## License
 
-MRGMarqueeLabel is © 2014-2016 [Mirego](http://www.mirego.com) and may be freely
+MRGMarqueeLabel is © 2014-2017 [Mirego](http://www.mirego.com) and may be freely
 distributed under the [New BSD license](http://opensource.org/licenses/BSD-3-Clause).
 See the [`LICENSE`](https://github.com/mirego/MRGMarqueeLabel.iOS/blob/master/LICENSE) file.
 
