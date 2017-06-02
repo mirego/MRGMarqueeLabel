@@ -258,7 +258,6 @@
         scrollAnimGroup.beginTime = CACurrentMediaTime() + self.pause;
         scrollAnimGroup.duration = duration + self.pause;
         scrollAnimGroup.repeatCount = INFINITY;
-        scrollAnimGroup.delegate = self;
         scrollAnimGroup.animations = @[scrollAnim];
         
         [self.labelsContainerView.layer addAnimation:scrollAnimGroup forKey:@"marquee"];
@@ -282,12 +281,6 @@
         maskAnimGroup.animations = @[maskColors];
         
         [self.maskLayer addAnimation:maskAnimGroup forKey:@"mask"];
-    }
-}
-
-- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
-    if (!flag) {
-        [self setNeedsAnimationReset];
     }
 }
 
