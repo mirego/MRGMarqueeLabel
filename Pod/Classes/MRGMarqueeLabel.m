@@ -28,11 +28,7 @@
 
 #import "MRGMarqueeLabel.h"
 
-#ifdef __IPHONE_10_0
-@interface MRGMarqueeLabel () <CAAnimationDelegate>
-#else
 @interface MRGMarqueeLabel ()
-#endif
 
 @property (nonatomic, readonly) UIView *contentView;
 @property (nonatomic, readonly) UIView *labelsContainerView;
