@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "MRGMarqueeLabel"
-  s.version          = "1.0.5"
+  s.version          = "1.0.6"
   s.summary          = "A label with a marquee effect."
   s.homepage         = "https://github.com/Mirego/MRGMarqueeLabel"
   s.license          = 'BSD 3-Clause'
