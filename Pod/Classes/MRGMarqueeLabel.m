@@ -48,10 +48,10 @@
 - (instancetype)initWithFrame:(CGRect)frame text:(NSString *)text {
     self = [super initWithFrame:frame];
     if (self) {
-        _animationSpeed = 100;
+        _animationSpeed = 100.f;
         _animationTimingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-        _pause = 1;
-        _gapWidth = 100;
+        _pause = 1.f;
+        _gapWidth = 100.f;
         _repeatCount = INFINITY;
         
         [self addSubview:(_contentView = [UIView new])];
@@ -66,10 +66,10 @@
         self.secondLabel.backgroundColor = [UIColor clearColor];
         
         _maskLayer = [CAGradientLayer layer];
-        self.maskLayer.startPoint = CGPointMake(0, 0.5f);
-        self.maskLayer.endPoint = CGPointMake(1, 0.5f);
+        self.maskLayer.startPoint = CGPointMake(0.f, 0.5f);
+        self.maskLayer.endPoint = CGPointMake(1.f, 0.5f);
         self.maskLayer.colors = [self leftSideVisibleColors];
-        self.maskInset = 20.0f;
+        self.maskInset = 20.f;
     }
     
     return self;
@@ -222,8 +222,8 @@
         
     } else {
         containerRect.size.height = CGRectGetHeight(self.bounds);
-        containerRect.size.width = labelSize.width * 2 + self.gapWidth;
-        containerRect.origin.x = (self.textAlignment == MRGMarqueeLabelTextAlignmentLeft ? 0 : self.maskInset);
+        containerRect.size.width = (labelSize.width * 2.f) + self.gapWidth;
+        containerRect.origin.x = (self.textAlignment == MRGMarqueeLabelTextAlignmentLeft ? 0.f : self.maskInset);
         
         self.contentView.layer.mask = self.maskLayer;
     }
@@ -244,20 +244,20 @@
 }
 
 - (void)handleAnimations {
-    if (self.animationSpeed <= 0) {
+    if (self.animationSpeed <= 0.f) {
         return;
     }
     
-    CGFloat duration = CGRectGetWidth(self.firstLabel.bounds) / MAX(self.animationSpeed, 1);
+    CGFloat duration = CGRectGetWidth(self.firstLabel.bounds) / MAX(self.animationSpeed, 1.f);
     
     if (!self.textFitsWidth) {
         CGFloat toValue = -(self.firstLabel.frame.size.width + self.gapWidth);
         CABasicAnimation *scrollAnim = [CABasicAnimation animationWithKeyPath:@"transform.translation.x"];
-        scrollAnim.fromValue = @(0);
+        scrollAnim.fromValue = @(0.f);
         scrollAnim.toValue = @(toValue);
         scrollAnim.duration = duration;
         scrollAnim.fillMode = kCAFillModeBackwards;
-        scrollAnim.timingFunction = self.pause > 0 ? self.animationTimingFunction : [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+        scrollAnim.timingFunction = self.pause > 0.f ? self.animationTimingFunction : [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
         
         CAAnimationGroup *scrollAnimGroup = [CAAnimationGroup animation];
         scrollAnimGroup.beginTime = CACurrentMediaTime() + self.pause;
@@ -268,9 +268,9 @@
         [self.labelsContainerView.layer addAnimation:scrollAnimGroup forKey:@"marquee"];
     }
     
-    if (!self.textFitsWidth && self.textAlignment == MRGMarqueeLabelTextAlignmentLeft && self.pause > 0) {
+    if (!self.textFitsWidth && self.textAlignment == MRGMarqueeLabelTextAlignmentLeft && self.pause > 0.f) {
         CAKeyframeAnimation *maskColors = [CAKeyframeAnimation animationWithKeyPath:@"colors"];
-        maskColors.keyTimes = @[@0, @0.5, @1];
+        maskColors.keyTimes = @[@0.f, @0.5, @1.f];
         maskColors.values = @[
                               [self leftSideVisibleColors],
                               [self leftSideMaskedColors],
@@ -310,13 +310,13 @@
 - (void)updateMaskGradientLocations {
     if (!CGRectEqualToRect(self.bounds, CGRectZero)) {
         CGFloat inset = self.maskInset / CGRectGetWidth(self.bounds);
-        self.maskLayer.locations = @[@0, @(inset), @(1 - inset), @1];
+        self.maskLayer.locations = @[@0.f, @(inset), @(1.f - inset), @1.f];
     }
 }
 
 - (void)updateMaskColors {
     NSArray *colors;
-    if (!self.textFitsWidth && (self.textAlignment == MRGMarqueeLabelTextAlignmentCenter || self.pause == 0)) {
+    if (!self.textFitsWidth && (self.textAlignment == MRGMarqueeLabelTextAlignmentCenter || self.pause == 0.f)) {
         colors = [self leftSideMaskedColors];
     } else {
         colors = [self leftSideVisibleColors];
