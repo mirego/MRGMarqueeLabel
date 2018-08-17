@@ -52,6 +52,7 @@
         _animationTimingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
         _pause = 1;
         _gapWidth = 100;
+        _repeatCount = INFINITY;
         
         [self addSubview:(_contentView = [UIView new])];
         
@@ -141,6 +142,14 @@
 - (void)setGapWidth:(CGFloat)gapWidth {
     if (_gapWidth != gapWidth) {
         _gapWidth = gapWidth;
+        
+        [self setNeedsAnimationReset];
+    }
+}
+
+- (void)setRepeatCount:(CGFloat)repeatCount {
+    if (_repeatCount != repeatCount) {
+        _repeatCount = repeatCount;
         
         [self setNeedsAnimationReset];
     }
@@ -253,7 +262,7 @@
         CAAnimationGroup *scrollAnimGroup = [CAAnimationGroup animation];
         scrollAnimGroup.beginTime = CACurrentMediaTime() + self.pause;
         scrollAnimGroup.duration = duration + self.pause;
-        scrollAnimGroup.repeatCount = INFINITY;
+        scrollAnimGroup.repeatCount = self.repeatCount;
         scrollAnimGroup.animations = @[scrollAnim];
         
         [self.labelsContainerView.layer addAnimation:scrollAnimGroup forKey:@"marquee"];
@@ -273,7 +282,7 @@
         CAAnimationGroup *maskAnimGroup = [CAAnimationGroup animation];
         maskAnimGroup.beginTime = CACurrentMediaTime() + self.pause;
         maskAnimGroup.duration = duration + self.pause;
-        maskAnimGroup.repeatCount = INFINITY;
+        maskAnimGroup.repeatCount = self.repeatCount;
         maskAnimGroup.animations = @[maskColors];
         
         [self.maskLayer addAnimation:maskAnimGroup forKey:@"mask"];

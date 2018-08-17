@@ -40,6 +40,7 @@ typedef NS_ENUM(NSInteger, MRGMarqueeLabelTextAlignment) {
 @property (nonatomic) CGFloat pause; // Delay in seconds between marquee animations.
 @property (nonatomic) CGFloat maskInset; // Left and right gradient mask inset.
 @property (nonatomic) CGFloat gapWidth; // Blank space shown before displaying the text again.
+@property (nonatomic) CGFloat repeatCount; // Defaults to INFINITY
 @property (nonatomic) NSString *text;
 @property (nonatomic) UIColor *textColor;
 @property (nonatomic) UIFont *font;
