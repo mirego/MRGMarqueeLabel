@@ -245,6 +245,8 @@
 
 - (void)handleAnimations {
     if (self.animationSpeed <= 0.f) {
+        [self.labelsContainerView.layer removeAnimationForKey:@"marquee"];
+        [self.maskLayer removeAnimationForKey:@"mask"];
         return;
     }
     
