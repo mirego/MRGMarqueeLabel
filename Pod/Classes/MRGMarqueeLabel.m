@@ -241,6 +241,7 @@
     self.secondLabel.frame = secondLabelFrame;
     self.secondLabel.hidden = self.textFitsWidth;
     
+    [self updateMaskColors];
     [self handleAnimations];
 }
 
