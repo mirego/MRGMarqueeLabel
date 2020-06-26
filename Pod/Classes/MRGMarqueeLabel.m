@@ -109,6 +109,7 @@
     if (_animationSpeed != animationSpeed) {
         _animationSpeed = animationSpeed;
         
+        [self updateMaskColors];
         [self setNeedsAnimationReset];
     }
 }
@@ -318,7 +319,8 @@
 
 - (void)updateMaskColors {
     NSArray *colors;
-    if (!self.textFitsWidth && (self.textAlignment == MRGMarqueeLabelTextAlignmentCenter || self.pause == 0.f)) {
+    if (!self.textFitsWidth && (self.animationSpeed != 0.f) &&
+        (self.textAlignment == MRGMarqueeLabelTextAlignmentCenter || self.pause == 0.f)) {
         colors = [self leftSideMaskedColors];
     } else {
         colors = [self leftSideVisibleColors];
