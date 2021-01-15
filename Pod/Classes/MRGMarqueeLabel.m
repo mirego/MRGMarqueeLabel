@@ -48,6 +48,9 @@
 - (instancetype)initWithFrame:(CGRect)frame text:(NSString *)text {
     self = [super initWithFrame:frame];
     if (self) {
+        self.isAccessibilityElement = YES;
+        self.accessibilityTraits = super.accessibilityTraits | UIAccessibilityTraitStaticText;
+        
         _animationSpeed = 100.f;
         _animationTimingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
         _pause = 1.f;
@@ -59,10 +62,12 @@
         [self.contentView addSubview:(_labelsContainerView = [UIView new])];
         
         [self.labelsContainerView addSubview:(_firstLabel = [UILabel new])];
+        self.firstLabel.isAccessibilityElement = NO;
         self.firstLabel.backgroundColor = [UIColor clearColor];
         self.firstLabel.text = text;
         
         [self.labelsContainerView addSubview:(_secondLabel = [UILabel new])];
+        self.secondLabel.isAccessibilityElement = NO;
         self.secondLabel.backgroundColor = [UIColor clearColor];
         
         _maskLayer = [CAGradientLayer layer];
@@ -162,6 +167,7 @@
 
 - (void)setText:(NSString *)text {
     if (![self.firstLabel.text isEqualToString:text]) {
+        self.accessibilityLabel = text;
         self.firstLabel.text = text;
         self.secondLabel.text = text;
         
@@ -276,10 +282,10 @@
         CAKeyframeAnimation *maskColors = [CAKeyframeAnimation animationWithKeyPath:@"colors"];
         maskColors.keyTimes = @[@0.f, @0.5, @1.f];
         maskColors.values = @[
-                              [self leftSideVisibleColors],
-                              [self leftSideMaskedColors],
-                              [self leftSideVisibleColors]
-                              ];
+            [self leftSideVisibleColors],
+            [self leftSideMaskedColors],
+            [self leftSideVisibleColors]
+        ];
         maskColors.duration = duration;
         maskColors.fillMode = kCAFillModeBackwards;
         
@@ -295,20 +301,20 @@
 
 - (NSArray *)leftSideMaskedColors {
     return @[
-             (id)UIColor.clearColor.CGColor,
-             (id)UIColor.whiteColor.CGColor,
-             (id)UIColor.whiteColor.CGColor,
-             (id)UIColor.clearColor.CGColor
-             ];
+        (id)UIColor.clearColor.CGColor,
+        (id)UIColor.whiteColor.CGColor,
+        (id)UIColor.whiteColor.CGColor,
+        (id)UIColor.clearColor.CGColor
+    ];
 }
 
 - (NSArray *)leftSideVisibleColors {
     return @[
-             (id)UIColor.whiteColor.CGColor,
-             (id)UIColor.whiteColor.CGColor,
-             (id)UIColor.whiteColor.CGColor,
-             (id)UIColor.clearColor.CGColor
-             ];
+        (id)UIColor.whiteColor.CGColor,
+        (id)UIColor.whiteColor.CGColor,
+        (id)UIColor.whiteColor.CGColor,
+        (id)UIColor.clearColor.CGColor
+    ];
 }
 
 - (void)updateMaskGradientLocations {
